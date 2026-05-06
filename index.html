@@ -75,6 +75,40 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            table {
+                font-size: 12px;
+            }
+        }
+
+        /* 📲 Tablet */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .navbar {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+
+        /* 💻 Desktop */
+        @media (min-width: 1025px) {
+            .navbar {
+                justify-content: space-evenly;
+            }
+
+            table {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 
@@ -96,124 +130,104 @@
     </div>
 
     <!-- ✅ NOTICE SECTION (RESTORED) -->
-<section id="notice">
+    <section id="notice">
 
-    <h2 data-bn="নোটিশ" data-en="Notice" data-cn="通知">
-        নোটিশ
-    </h2>
+        <h2 data-bn="নোটিশ" data-en="Notice" data-cn="通知">
+            নোটিশ
+        </h2>
 
-    <!-- INFO CARD -->
-    <div class="card">
+        <!-- INFO CARD -->
+        <div class="card">
 
-        <p data-bn="প্রধান অতিথি: Cheney"
-           data-en="Chief Guest: Cheney"
-           data-cn="主宾: Cheney">
-            <b>প্রধান অতিথি:</b> Cheney
-        </p>
+            <p data-bn="প্রধান অতিথি: Cheney" data-en="Chief Guest: Cheney" data-cn="主宾: Cheney">
+                <b>প্রধান অতিথি:</b> Cheney
+            </p>
 
-        <p data-bn="বিচারক: Root, Queen of Ditto, Rakib"
-           data-en="Judges: Root, Queen of Ditto, Rakib"
-           data-cn="评委: Root, Queen of Ditto, Rakib">
-            <b>বিচারক:</b> Root, Queen of Ditto, Rakib
-        </p>
+            <p data-bn="বিচারক: Root, Queen of Ditto, Rakib" data-en="Judges: Root, Queen of Ditto, Rakib"
+                data-cn="评委: Root, Queen of Ditto, Rakib">
+                <b>বিচারক:</b> Root, Queen of Ditto, Rakib
+            </p>
 
-        <p data-bn="অনুষ্ঠান উপস্থাপিকা: Mayabini"
-           data-en="Host: Mayabini"
-           data-cn="主持人: Mayabini">
-            <b>অনুষ্ঠান উপস্থাপিকা:</b> Mayabini
-        </p>
+            <p data-bn="অনুষ্ঠান উপস্থাপিকা: Mayabini" data-en="Host: Mayabini" data-cn="主持人: Mayabini">
+                <b>অনুষ্ঠান উপস্থাপিকা:</b> Mayabini
+            </p>
 
-        <p data-bn="ফলাফল হিসাবরক্ষক: Reza"
-           data-en="Result Manager: Reza"
-           data-cn="结果统计: Reza">
-            <b>ফলাফল হিসাবরক্ষক:</b> Reza
-        </p>
+            <p data-bn="ফলাফল হিসাবরক্ষক: Reza" data-en="Result Manager: Reza" data-cn="结果统计: Reza">
+                <b>ফলাফল হিসাবরক্ষক:</b> Reza
+            </p>
 
-    </div>
+        </div>
 
-    <!-- EVENT INFO -->
-    <div class="card">
+        <!-- EVENT INFO -->
+        <div class="card">
 
-        <h3 data-bn="💐 মা দিবস কবিতা ইভেন্ট 💐"
-            data-en="💐 Mother Poem Event 💐"
-            data-cn="💐 母亲诗歌活动 💐">
-            💐 মা দিবস কবিতা ইভেন্ট 💐
-        </h3>
+            <h3 data-bn="💐 মা দিবস কবিতা ইভেন্ট 💐" data-en="💐 Mother Poem Event 💐" data-cn="💐 母亲诗歌活动 💐">
+                💐 মা দিবস কবিতা ইভেন্ট 💐
+            </h3>
 
-        <p data-bn="অংশগ্রহণকারীদের তাদের মাকে নিয়ে কবিতা লিখে লাইভে আবৃত্তি করতে হবে।"
-           data-en="Participants must write a poem for their mother and recite it live."
-           data-cn="参与者需写一首献给母亲的诗并直播朗读。">
-            অংশগ্রহণকারীদের তাদের মাকে উৎসর্গ করে একটি কবিতা বা ছোট লেখা তৈরি করতে হবে এবং লাইভে আবৃত্তি করতে হবে।
-        </p>
+            <p data-bn="অংশগ্রহণকারীদের তাদের মাকে নিয়ে কবিতা লিখে লাইভে আবৃত্তি করতে হবে।"
+                data-en="Participants must write a poem for their mother and recite it live."
+                data-cn="参与者需写一首献给母亲的诗并直播朗读。">
+                অংশগ্রহণকারীদের তাদের মাকে উৎসর্গ করে একটি কবিতা বা ছোট লেখা তৈরি করতে হবে এবং লাইভে আবৃত্তি করতে হবে।
+            </p>
 
-        <p><b>Room ID:</b> 10299</p>
+            <p><b>Room ID:</b> 10299</p>
 
-        <ul>
-            <li data-bn="রাউন্ড ১: ৯ মে ২০২৬ — টপ ১৫"
-                data-en="Round 1: May 9, 2026 — Top 15"
-                data-cn="第一轮：2026年5月9日 — 前15名">
-                Round 1: Top 15 — 9 May 2026
-            </li>
+            <ul>
+                <li data-bn="রাউন্ড ১: ৯ মে ২০২৬ — টপ ১৫" data-en="Round 1: May 9, 2026 — Top 15"
+                    data-cn="第一轮：2026年5月9日 — 前15名">
+                    Round 1: Top 15 — 9 May 2026
+                </li>
 
-            <li data-bn="রাউন্ড ২: ১০ মে ২০২৬ — টপ ৫"
-                data-en="Round 2: May 10, 2026 — Top 5"
-                data-cn="第二轮：2026年5月10日 — 前5名">
-                Round 2: Top 5 — 10 May 2026
-            </li>
-        </ul>
+                <li data-bn="রাউন্ড ২: ১০ মে ২০২৬ — টপ ৫" data-en="Round 2: May 10, 2026 — Top 5"
+                    data-cn="第二轮：2026年5月10日 — 前5名">
+                    Round 2: Top 5 — 10 May 2026
+                </li>
+            </ul>
 
-    </div>
+        </div>
 
-    <!-- PRIZE -->
-    <div class="card">
+        <!-- PRIZE -->
+        <div class="card">
 
-        <h3 data-bn="🏆 পুরস্কার ব্যবস্থা"
-            data-en="🏆 Prize Mechanism"
-            data-cn="🏆 奖励机制">
-            🏆 Prize Mechanism
-        </h3>
+            <h3 data-bn="🏆 পুরস্কার ব্যবস্থা" data-en="🏆 Prize Mechanism" data-cn="🏆 奖励机制">
+                🏆 Prize Mechanism
+            </h3>
 
-        <ul>
-            <li data-bn="প্রথম: ৮০,০০০ কয়েন + VIP7 x 6"
-                data-en="TOP 1: 80,000 coins + VIP7 x 6"
-                data-cn="第一名：80,000金币 + VIP7 x 6">
-                🥇 TOP 1: 80,000 coins, VIP7 x 6
-            </li>
+            <ul>
+                <li data-bn="প্রথম: ৮০,০০০ কয়েন + VIP7 x 6" data-en="TOP 1: 80,000 coins + VIP7 x 6"
+                    data-cn="第一名：80,000金币 + VIP7 x 6">
+                    🥇 TOP 1: 80,000 coins, VIP7 x 6
+                </li>
 
-            <li data-bn="দ্বিতীয়: ৬০,০০০ কয়েন + VIP6 x 10"
-                data-en="TOP 2: 60,000 coins + VIP6 x 10"
-                data-cn="第二名：60,000金币 + VIP6 x 10">
-                🥈 TOP 2: 60,000 coins, VIP6 x 10
-            </li>
+                <li data-bn="দ্বিতীয়: ৬০,০০০ কয়েন + VIP6 x 10" data-en="TOP 2: 60,000 coins + VIP6 x 10"
+                    data-cn="第二名：60,000金币 + VIP6 x 10">
+                    🥈 TOP 2: 60,000 coins, VIP6 x 10
+                </li>
 
-            <li data-bn="তৃতীয়: ৪০,০০০ কয়েন + VIP6 x 5"
-                data-en="TOP 3: 40,000 coins + VIP6 x 5"
-                data-cn="第三名：40,000金币 + VIP6 x 5">
-                🥉 TOP 3: 40,000 coins, VIP6 x 5
-            </li>
+                <li data-bn="তৃতীয়: ৪০,০০০ কয়েন + VIP6 x 5" data-en="TOP 3: 40,000 coins + VIP6 x 5"
+                    data-cn="第三名：40,000金币 + VIP6 x 5">
+                    🥉 TOP 3: 40,000 coins, VIP6 x 5
+                </li>
 
-            <li data-bn="চতুর্থ: ২০,০০০ কয়েন + VIP5 x 10"
-                data-en="TOP 4: 20,000 coins + VIP5 x 10"
-                data-cn="第四名：20,000金币 + VIP5 x 10">
-                🏅 TOP 4: 20,000 coins, VIP5 x 10
-            </li>
+                <li data-bn="চতুর্থ: ২০,০০০ কয়েন + VIP5 x 10" data-en="TOP 4: 20,000 coins + VIP5 x 10"
+                    data-cn="第四名：20,000金币 + VIP5 x 10">
+                    🏅 TOP 4: 20,000 coins, VIP5 x 10
+                </li>
 
-            <li data-bn="পঞ্চম: ১০,০০০ কয়েন + VIP5 x 7"
-                data-en="TOP 5: 10,000 coins + VIP5 x 7"
-                data-cn="第五名：10,000金币 + VIP5 x 7">
-                🎖️ TOP 5: 10,000 coins, VIP5 x 7
-            </li>
+                <li data-bn="পঞ্চম: ১০,০০০ কয়েন + VIP5 x 7" data-en="TOP 5: 10,000 coins + VIP5 x 7"
+                    data-cn="第五名：10,000金币 + VIP5 x 7">
+                    🎖️ TOP 5: 10,000 coins, VIP5 x 7
+                </li>
 
-            <li data-bn="অংশগ্রহণ: ১,০০০ কয়েন"
-                data-en="Participation: 1,000 coins"
-                data-cn="参与奖：1,000金币">
-                🏵️ Participation: 1,000 coins each
-            </li>
-        </ul>
+                <li data-bn="অংশগ্রহণ: ১,০০০ কয়েন" data-en="Participation: 1,000 coins" data-cn="参与奖：1,000金币">
+                    🏵️ Participation: 1,000 coins each
+                </li>
+            </ul>
 
-    </div>
+        </div>
 
-</section>
+    </section>
 
     <!-- FIRST -->
     <section id="first">
