@@ -52,6 +52,25 @@ document.addEventListener('DOMContentLoaded', () => {
     loadWinners();
 });
 
+function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    const icon = document.querySelector('.menu-trigger i');
+    nav.classList.toggle('active');
+    if (nav.classList.contains('active')) {
+        icon.classList.replace('fa-heart', 'fa-times');
+    } else {
+        icon.classList.replace('fa-times', 'fa-heart');
+    }
+}
+
+function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+    document.getElementById('navLinks').classList.remove('active');
+    document.querySelector('.menu-trigger i').classList.replace('fa-times', 'fa-heart');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function loadRound1() {
     const list = document.getElementById('list46');
     list.innerHTML = "";
@@ -65,7 +84,7 @@ function loadRound2() {
     const list = document.getElementById('list15');
     list.innerHTML = "";
     top15.forEach((p, index) => {
-        list.innerHTML += `<tr><td>${index + 1}</td><td>${p.id}</td><td>${p.name}</td><td>${p.agency}</td><td><strong>${p.r2Mark}</strong></td></tr>`;
+        list.innerHTML += `<tr><td>${index + 1}</td><td>${p.id}</td><td>${p.name}</td><td style="color:var(--gold)"><strong>${p.r2Mark}</strong></td></tr>`;
     });
 }
 
@@ -78,13 +97,14 @@ function loadWinners() {
 
     winners.forEach((p, index) => {
         if (p.r2Mark > 0) {
-            container.innerHTML += `<div class="winner-card"><h3>${icons[index]} TOP ${index + 1}</h3><p>${p.name}</p><span>${prizes[index]}</span></div>`;
+            container.innerHTML += `
+                <div class="winner-card">
+                    <span style="font-size:3rem">${icons[index]}</span>
+                    <h3>TOP ${index + 1}</h3>
+                    <p style="margin:10px 0; font-weight:bold">${p.name}</p>
+                    <div style="background:rgba(255,215,0,0.1); padding:10px; border-radius:10px; color:var(--gold)">${prizes[index]}</div>
+                </div>
+            `;
         }
     });
-}
-
-function showPage(pageId) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById(pageId).classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
 }

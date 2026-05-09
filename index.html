@@ -4,25 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Poem for My Mom - 2026</title>
+    <title>A Poem for My Mom - Mother's Day 2026</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo"><i class="fas fa-heart"></i> MOMS<span>VOICE</span></div>
-        <div class="nav-scroll-container">
-            <ul class="nav-links">
-                <li><a href="#" onclick="showPage('home')">Home</a></li>
-                <li><a href="#" onclick="showPage('notice')">Notice</a></li>
-                <li><a href="#" onclick="showPage('round1')">Round 1</a></li>
-                <li><a href="#" onclick="showPage('round2')">Round 2</a></li>
-                <li><a href="#" onclick="showPage('winner')">Winners</a></li>
-            </ul>
+    <!-- Floating Vertical Menu -->
+    <div class="menu-wrapper" id="menuWrapper">
+        <div class="menu-trigger" onclick="toggleMenu()">
+            <i class="fas fa-heart"></i>
         </div>
-    </nav>
+        <ul class="nav-links-vertical" id="navLinks">
+            <li><a href="#" onclick="showPage('home')"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#" onclick="showPage('notice')"><i class="fas fa-bullhorn"></i> Notice</a></li>
+            <li><a href="#" onclick="showPage('round1')"><i class="fas fa-list-ol"></i> Round 1</a></li>
+            <li><a href="#" onclick="showPage('round2')"><i class="fas fa-star"></i> Round 2</a></li>
+            <li><a href="#" onclick="showPage('winner')"><i class="fas fa-trophy"></i> Winners</a></li>
+        </ul>
+    </div>
 
     <div class="container">
 
@@ -31,27 +32,27 @@
             <div class="hero">
                 <div class="mom-icon"><i class="fas fa-heart"></i></div>
                 <h1 class="glow-text">A Poem for My Mom</h1>
-                <p>"মায়ের পায়ের নিচে সন্তানের জান্নাত" - Celebrate Maternal Love through Poetry 📖</p>
+                <p>"মায়ের পায়ের নিচে সন্তানের জান্নাত" - Celebrate Maternal Love 📖</p>
                 <div class="hero-info">
                     <span><i class="fas fa-door-open"></i> Room ID: 10299</span>
                 </div>
-                <button class="btn-primary" onclick="showPage('notice')">ইভেন্টের নিয়মাবলী দেখুন <i
-                        class="fas fa-chevron-right"></i></button>
+                <button class="btn-primary" onclick="showPage('notice')">ইভেন্ট ডিটেইলস দেখুন</button>
             </div>
         </section>
 
         <!-- Notice Section -->
         <section id="notice" class="page">
-            <h2 class="sec-title">Event Information & Guests</h2>
+            <h2 class="sec-title">Event Info & Guests</h2>
+
             <div class="notice-grid">
                 <div class="notice-card highlight-card">
                     <i class="fas fa-crown"></i>
                     <h3>Chief Guest</h3>
-                    <p class="guest-name">Cheney</p>
+                    <p class="name-text">Cheney</p>
                 </div>
                 <div class="notice-card">
                     <i class="fas fa-gavel"></i>
-                    <h3>Judges Panel</h3>
+                    <h3>Judges</h3>
                     <p>Root, Admin BD Leader, Admin Rakib</p>
                 </div>
                 <div class="notice-card">
@@ -61,14 +62,15 @@
                 </div>
                 <div class="notice-card">
                     <i class="fas fa-users"></i>
-                    <h3>Special Guests</h3>
+                    <h3>Guests</h3>
                     <p>Queen Of Ditto, Saif, Silent, Rockstar, Bindas</p>
                 </div>
             </div>
 
             <div class="info-box">
-                <h3>💐💐 The "A Poem for My Mom" Event 💐💐</h3>
-                <p>Recite a poem dedicated to your mother via voice 🎙️ live on stream.</p>
+                <h3>💐💐 The Event Rules 💐💐</h3>
+                <p>Create a poem 📖 dedicated to your mother and recite it aloud via voice 🎙️ during the live stream.
+                </p>
                 <div class="schedule-grid">
                     <div class="sch-item"><strong>Round 1:</strong> May 9 | ⏰ 9 PM</div>
                     <div class="sch-item"><strong>Round 2:</strong> May 10 | ⏰ 9 PM</div>
@@ -76,9 +78,9 @@
             </div>
         </section>
 
-        <!-- Round Sections -->
+        <!-- Round 1 Section -->
         <section id="round1" class="page">
-            <h2 class="sec-title">First Round Results</h2>
+            <h2 class="sec-title">Round 1 (All Participants)</h2>
             <div class="table-wrapper">
                 <table>
                     <thead>
@@ -94,8 +96,9 @@
             </div>
         </section>
 
+        <!-- Round 2 Section -->
         <section id="round2" class="page">
-            <h2 class="sec-title gold-gradient">Second Round (Top 15)</h2>
+            <h2 class="sec-title gold-gradient">Round 2 (Top 15)</h2>
             <div class="table-wrapper">
                 <table>
                     <thead>
@@ -103,7 +106,6 @@
                             <th>Rank</th>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Agency</th>
                             <th>Mark</th>
                         </tr>
                     </thead>
@@ -112,8 +114,9 @@
             </div>
         </section>
 
+        <!-- Winners Section -->
         <section id="winner" class="page">
-            <h2 class="sec-title pulse-title"><i class="fas fa-crown"></i> Winners</h2>
+            <h2 class="sec-title pulse-title"><i class="fas fa-crown"></i> Official Winners</h2>
             <div class="winner-grid" id="winnerList"></div>
         </section>
 
