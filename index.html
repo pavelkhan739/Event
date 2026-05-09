@@ -1,712 +1,151 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>মা দিবস ইভেন্ট ২০২৬</title>
-
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            background: #fdf6f9;
-        }
-
-        .navbar {
-            position: sticky;
-            top: 0;
-            background: #e91e63;
-            padding: 10px;
-            display: flex;
-            justify-content: space-around;
-            color: white;
-            flex-wrap: wrap;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        section {
-            padding: 20px;
-            display: none;
-        }
-
-        h2 {
-            text-align: center;
-            color: #d81b60;
-        }
-
-        table {
-            width: 95%;
-            margin: auto;
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background: #f8bbd0;
-        }
-
-        .lang-btn {
-            margin: 10px;
-            padding: 8px 15px;
-            border: none;
-            background: #f06292;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .card {
-            background: white;
-            padding: 15px;
-            margin: 10px auto;
-            width: 90%;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            table {
-                font-size: 12px;
-            }
-        }
-
-        /* 📲 Tablet */
-        @media (min-width: 601px) and (max-width: 1024px) {
-            .navbar {
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-
-            table {
-                font-size: 14px;
-            }
-        }
-
-        /* 💻 Desktop */
-        @media (min-width: 1025px) {
-            .navbar {
-                justify-content: space-evenly;
-            }
-
-            table {
-                font-size: 16px;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Poem for My Mom - Mother's Day 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <a onclick="showPage('notice')" data-bn="নোটিশ" data-en="Notice" data-cn="通知">নোটিশ</a>
-        <a onclick="showPage('first')" data-bn="প্রথম রাউন্ড" data-en="First Round" data-cn="第一轮">প্রথম রাউন্ড</a>
-        <a onclick="showPage('second')" data-bn="দ্বিতীয় রাউন্ড" data-en="Second Round" data-cn="第二轮">দ্বিতীয় রাউন্ড</a>
-        <a onclick="showPage('final')" data-bn="ফাইনাল" data-en="Final Round" data-cn="决赛">ফাইনাল</a>
+    <nav class="navbar">
+        <div class="logo"><i class="fas fa-heart"></i> MOMS<span>VOICE</span></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('notice')">Notice</a></li>
+            <li><a href="#" onclick="showPage('round1')">First Round</a></li>
+            <li><a href="#" onclick="showPage('round2')">Second Round</a></li>
+            <li><a href="#" onclick="showPage('winner')">Winners</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Home Section -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="mom-icon"><i class="fas fa-heart"></i></div>
+                <h1 class="glow-text">A Poem for My Mom</h1>
+                <p>"মায়ের পায়ের নিচে সন্তানের জান্নাত" - Celebrate Maternal Love through Poetry 📖</p>
+                <div class="hero-info">
+                    <span><i class="fas fa-door-open"></i> Room ID: 10299</span>
+                </div>
+                <button class="btn-primary" onclick="showPage('notice')">ইভেন্টের নিয়মাবলী দেখুন <i
+                        class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+        <section id="notice" class="page">
+            <h2 class="sec-title">Event Information & Guests</h2>
+            
+            <div class="notice-grid">
+                <!-- Chief Guest -->
+                <div class="notice-card highlight-card">
+                    <i class="fas fa-crown"></i>
+                    <h3>Chief Guest</h3>
+                    <p class="guest-name">Cheney</p>
+                </div>
+
+                <!-- Judges Panel (নতুন যোগ করা হয়েছে) -->
+                <div class="notice-card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Judges Panel</h3>
+                    <p><strong>Judge:</strong> Root</p>
+                    <p><strong>Judge:</strong> Admin BD Leader Of Ditto</p>
+                    <p><strong>Judge:</strong> Admin Rakib</p>
+                </div>
+
+                <!-- Special Guests -->
+                <div class="notice-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Special Guests</h3>
+                    <p>Queen Of Ditto, Saif, Silent, Rockstar, Bindas</p>
+                </div>
+
+                <!-- Anchors -->
+                <div class="notice-card">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h3>Anchors</h3>
+                    <p><strong>Anchor:</strong> Mayabini</p>
+                    <p><strong>Co-Anchor:</strong> Reza</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>💐💐 The "A Poem for My Mom" Event 💐💐</h3>
+                <p>Participants are required to create a poem 📖 dedicated to their mother or a short text expressing maternal love 🩷, and then recite it aloud via voice 🎙️ during a live stream for judging.</p>
+                
+                <div class="schedule-grid">
+                    <div class="sch-item">
+                        <strong>Round 1: Top 15</strong>
+                        <span>May 9, 2026 | ⏰ 9 PM (BD Time)</span>
+                    </div>
+                    <div class="sch-item">
+                        <strong>Round 2: 5 out of 15</strong>
+                        <span>May 10, 2026 | ⏰ 9 PM (BD Time)</span>
+                    </div>
+                </div>
+                <div class="reg-bar">
+                    <p>📢 Registration: April 28 (4 PM) - April 30 (4 PM) BD Time | <strong>Room ID: 10299</strong></p>
+                </div>
+            </div>
+
+            <div class="ticker-box">
+                <div class="ticker-title">Update:</div>
+                <marquee>Participate and win coins! Every participant gets 1,000 coins as a participation prize 🏵️</marquee>
+            </div>
+        </section>
+
+        <!-- Round Sections (Script handles content) -->
+        <section id="round1" class="page">
+            <h2 class="sec-title">First Round Results</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Agency</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list46"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="round2" class="page">
+            <h2 class="sec-title gold-gradient">Second Round (Top 15)</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Agency</th>
+                            <th>Mark</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list15"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="winner" class="page">
+            <h2 class="sec-title pulse-title"><i class="fas fa-crown"></i> Official Winners</h2>
+            <div class="winner-grid" id="winnerList"></div>
+            <div class="action-area no-print" style="text-align: center; margin-top: 30px;">
+                <button class="btn-print" onclick="window.print()"><i class="fas fa-print"></i> Print Report</button>
+            </div>
+        </section>
+
     </div>
 
-    <!-- LANGUAGE BUTTON -->
-    <div style="text-align:center;">
-        <button class="lang-btn" onclick="setLang('bn')">বাংলা</button>
-        <button class="lang-btn" onclick="setLang('en')">English</button>
-        <button class="lang-btn" onclick="setLang('cn')">中文</button>
-    </div>
-
-    <!-- ✅ NOTICE SECTION (RESTORED) -->
-    <section id="notice">
-
-        <h2 data-bn="নোটিশ" data-en="Notice" data-cn="通知">
-            নোটিশ
-        </h2>
-
-        <!-- INFO CARD -->
-        <div class="card">
-
-            <p data-bn="প্রধান অতিথি: Cheney" data-en="Chief Guest: Cheney" data-cn="主宾: Cheney">
-                <b>প্রধান অতিথি:</b> Cheney
-            </p>
-
-            <p data-bn="বিচারক: Root, Queen of Ditto, Rakib" data-en="Judges: Root, Queen of Ditto, Rakib"
-                data-cn="评委: Root, Queen of Ditto, Rakib">
-                <b>বিচারক:</b> Root, Queen of Ditto, Rakib
-            </p>
-
-            <p data-bn="অনুষ্ঠান উপস্থাপিকা: Mayabini" data-en="Host: Mayabini" data-cn="主持人: Mayabini">
-                <b>অনুষ্ঠান উপস্থাপিকা:</b> Mayabini
-            </p>
-
-            <p data-bn="ফলাফল হিসাবরক্ষক: Reza" data-en="Result Manager: Reza" data-cn="结果统计: Reza">
-                <b>ফলাফল হিসাবরক্ষক:</b> Reza
-            </p>
-
-        </div>
-
-        <!-- EVENT INFO -->
-        <div class="card">
-
-            <h3 data-bn="💐 মা দিবস কবিতা ইভেন্ট 💐" data-en="💐 Mother Poem Event 💐" data-cn="💐 母亲诗歌活动 💐">
-                💐 মা দিবস কবিতা ইভেন্ট 💐
-            </h3>
-
-            <p data-bn="অংশগ্রহণকারীদের তাদের মাকে নিয়ে কবিতা লিখে লাইভে আবৃত্তি করতে হবে।"
-                data-en="Participants must write a poem for their mother and recite it live."
-                data-cn="参与者需写一首献给母亲的诗并直播朗读。">
-                অংশগ্রহণকারীদের তাদের মাকে উৎসর্গ করে একটি কবিতা বা ছোট লেখা তৈরি করতে হবে এবং লাইভে আবৃত্তি করতে হবে।
-            </p>
-
-            <p><b>Room ID:</b> 10299</p>
-
-            <ul>
-                <li data-bn="রাউন্ড ১: ৯ মে ২০২৬ — টপ ১৫" data-en="Round 1: May 9, 2026 — Top 15"
-                    data-cn="第一轮：2026年5月9日 — 前15名">
-                    Round 1: Top 15 — 9 May 2026
-                </li>
-
-                <li data-bn="রাউন্ড ২: ১০ মে ২০২৬ — টপ ৫" data-en="Round 2: May 10, 2026 — Top 5"
-                    data-cn="第二轮：2026年5月10日 — 前5名">
-                    Round 2: Top 5 — 10 May 2026
-                </li>
-            </ul>
-
-        </div>
-
-        <!-- PRIZE -->
-        <div class="card">
-
-            <h3 data-bn="🏆 পুরস্কার ব্যবস্থা" data-en="🏆 Prize Mechanism" data-cn="🏆 奖励机制">
-                🏆 Prize Mechanism
-            </h3>
-
-            <ul>
-                <li data-bn="প্রথম: ৮০,০০০ কয়েন + VIP7 x 6" data-en="TOP 1: 80,000 coins + VIP7 x 6"
-                    data-cn="第一名：80,000金币 + VIP7 x 6">
-                    🥇 TOP 1: 80,000 coins, VIP7 x 6
-                </li>
-
-                <li data-bn="দ্বিতীয়: ৬০,০০০ কয়েন + VIP6 x 10" data-en="TOP 2: 60,000 coins + VIP6 x 10"
-                    data-cn="第二名：60,000金币 + VIP6 x 10">
-                    🥈 TOP 2: 60,000 coins, VIP6 x 10
-                </li>
-
-                <li data-bn="তৃতীয়: ৪০,০০০ কয়েন + VIP6 x 5" data-en="TOP 3: 40,000 coins + VIP6 x 5"
-                    data-cn="第三名：40,000金币 + VIP6 x 5">
-                    🥉 TOP 3: 40,000 coins, VIP6 x 5
-                </li>
-
-                <li data-bn="চতুর্থ: ২০,০০০ কয়েন + VIP5 x 10" data-en="TOP 4: 20,000 coins + VIP5 x 10"
-                    data-cn="第四名：20,000金币 + VIP5 x 10">
-                    🏅 TOP 4: 20,000 coins, VIP5 x 10
-                </li>
-
-                <li data-bn="পঞ্চম: ১০,০০০ কয়েন + VIP5 x 7" data-en="TOP 5: 10,000 coins + VIP5 x 7"
-                    data-cn="第五名：10,000金币 + VIP5 x 7">
-                    🎖️ TOP 5: 10,000 coins, VIP5 x 7
-                </li>
-
-                <li data-bn="অংশগ্রহণ: ১,০০০ কয়েন" data-en="Participation: 1,000 coins" data-cn="参与奖：1,000金币">
-                    🏵️ Participation: 1,000 coins each
-                </li>
-            </ul>
-
-        </div>
-
-    </section>
-
-    <!-- FIRST -->
-    <section id="first">
-
-        <h2 data-bn="প্রথম রাউন্ড" data-en="First Round" data-cn="第一轮">
-            প্রথম রাউন্ড
-        </h2>
-
-        <table>
-
-            <tr>
-                <th data-bn="আইডি নাম" data-en="ID Name" data-cn="参赛者姓名">ID Name</th>
-                <th data-bn="আইডি নম্বর" data-en="ID Number" data-cn="编号">ID Number</th>
-                <th data-bn="এজেন্সির নাম" data-en="Agency Name" data-cn="机构名称">Agency Name</th>
-                <th data-bn="মোট নম্বর" data-en="Total Mark" data-cn="总分">Total Mark</th>
-            </tr>
-
-            <tr>
-                <td>𝄟≛⃝𝐊𝐁𝐃🇧🇩ටි‏‏‏ꫀɭƒɪs꧊ꪱ̴</td>
-                <td>9995862</td>
-                <td>KING OF BANGLADESH</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Liyana</td>
-                <td>2187245</td>
-                <td>Green House</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>jonaki</td>
-                <td>6131985</td>
-                <td>FAIRY TALE AGENCY</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>MUN</td>
-                <td>3704785</td>
-                <td>FAIRY TALE AGENCY</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Sp AlVi</td>
-                <td>5769680</td>
-                <td>Super Power</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Nuha</td>
-                <td>693520</td>
-                <td>Super Power</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>মিতু</td>
-                <td>6640335</td>
-                <td>Heaven touch</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Ishrat</td>
-                <td>9996451</td>
-                <td>Heaven touch</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>NIDHI</td>
-                <td>6226140</td>
-                <td>Sopno Bilash</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>maya</td>
-                <td>5827322</td>
-                <td>Three star</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>jerin</td>
-                <td>5894380</td>
-                <td>Three star</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>বুড়ি</td>
-                <td>3319279</td>
-                <td>স্বপনের ভালোবাসা</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Samiya</td>
-                <td>9997251</td>
-                <td>স্বপনের ভালোবাসা</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Queen</td>
-                <td>3731401</td>
-                <td>স্বপনের ভালোবাসা</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Niha</td>
-                <td>4330966</td>
-                <td>স্বপনের ভালোবাসা</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Mithila</td>
-                <td>4856196</td>
-                <td>স্বপনের ভালোবাসা</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Ariyan</td>
-                <td>5062364</td>
-                <td>স্বপনের ভালোবাসা</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Orny</td>
-                <td>6151924</td>
-                <td>স্বপনের ভালোবাসা</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>RITU</td>
-                <td>4827780</td>
-                <td>AMADER GOLPO</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>sᴮIsrat࿐</td>
-                <td>5338065</td>
-                <td>স্বপ্নবুনন</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>sᴮAlpona࿐</td>
-                <td>8490037</td>
-                <td>স্বপ্নবুনন</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>sᴮRukaiya࿐</td>
-                <td>8417208</td>
-                <td>স্বপ্নবুনন</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>sᴮMinhajul࿐</td>
-                <td>5193623</td>
-                <td>স্বপ্নবুনন</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>R.K.Rocky</td>
-                <td>9991324</td>
-                <td>sunrise agency</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Onu</td>
-                <td>4414072</td>
-                <td>Rockstar</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Neha Rahman</td>
-                <td>2356605</td>
-                <td>Rockstar</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>ℛꌗ”°𝐉𝐨𝐲𝐚~𝐢𝐬𝐥𝐚𝐦</td>
-                <td>9997042</td>
-                <td>Rockstar</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>BD🇧🇩ᵃᵈᵐⁱⁿLEADER OF DITTO🦅</td>
-                <td>55505</td>
-                <td>Bismillah Agency</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>🆁🆀™👑P͒o͒𝑟𝚒t͒ᥲ̣rå👑࿐</td>
-                <td>2779028</td>
-                <td>Royal Queen</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>🆁🆀™👑 Sinthiya 👑࿐</td>
-                <td>9997081</td>
-                <td>Royal Queen</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>🆁🆀™👑 Sadiya 👑࿐</td>
-                <td>8845180</td>
-                <td>Royal Queen</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>🆁🆀™ 👑 🇲𝑨𝑯𝑨👑࿐</td>
-                <td>4496006</td>
-                <td>Royal Queen</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>🆁🆀™👑Fᴀɪᴢᴀ👑</td>
-                <td>4160130</td>
-                <td>Royal Queen</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>𝄟≛⃝𝐊𝐁𝐃🇧🇩Lavoni❤️</td>
-                <td>9220134</td>
-                <td>KING OF BANGLADESH</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>𝄟≛⃝𝐊𝐁𝐃Ashfi</td>
-                <td>9996582</td>
-                <td>KING OF BANGLADESH</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Bobe</td>
-                <td>666687</td>
-                <td>FRIEND pLUS AGENCY</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>juma</td>
-                <td>5244057</td>
-                <td>Smartness Agancy</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Rumi</td>
-                <td>8233164</td>
-                <td>Smartness Agancy</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Shanaj</td>
-                <td>8219340</td>
-                <td>Smartness Agancy</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>jabin</td>
-                <td>8418968</td>
-                <td>Smartness Agancy</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Mahi</td>
-                <td>9153768</td>
-                <td>Smartness Agancy</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Maya p</td>
-                <td>9508870</td>
-                <td>Green House</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>♥️⃝≛⃝𝐒𝐇✓🇷ⓐ𝓷𝓘 ♥️♥️</td>
-                <td>2879034</td>
-                <td>মায়াবী রোজ</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>♥️⃝≛⃝𝐒𝐇✓ পরিণীতা</td>
-                <td>8427144</td>
-                <td>মায়াবী রোজ</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>♥️⃝≛⃝𝐒𝐇✓🇸 🇷 🇦 🇧 🇴 🇳❤️</td>
-                <td>3026146</td>
-                <td>মায়াবী রোজ</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>♥️⃝≛⃝𝐒𝐇✓Prova</td>
-                <td>2119087</td>
-                <td>মায়াবী রোজ</td>
-                <td></td>
-            </tr>
-
-        </table>
-
-    </section>
-
-    <!-- SECOND -->
-    <section id="second">
-
-        <h2 data-bn="দ্বিতীয় রাউন্ড" data-en="Second Round" data-cn="第二轮">
-            দ্বিতীয় রাউন্ড
-        </h2>
-
-        <table>
-
-            <tr>
-                <th data-bn="আইডি নাম" data-en="ID Name" data-cn="参赛者姓名">ID Name</th>
-                <th data-bn="আইডি নম্বর" data-en="ID Number" data-cn="编号">ID Number</th>
-                <th data-bn="এজেন্সির নাম" data-en="Agency Name" data-cn="机构名称">Agency Name</th>
-                <th data-bn="মোট নম্বর" data-en="Total Mark" data-cn="总分">Total Mark</th>
-            </tr>
-
-            <!-- 15 Participants -->
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-        </table>
-
-    </section>
-
-    <!-- FINAL -->
-    <section id="final">
-
-        <h2 data-bn="ফাইনাল" data-en="Final Round" data-cn="决赛">
-            ফাইনাল
-        </h2>
-
-        <table>
-
-            <tr>
-                <th data-bn="আইডি নাম" data-en="ID Name" data-cn="参赛者姓名">ID Name</th>
-                <th data-bn="আইডি নম্বর" data-en="ID Number" data-cn="编号">ID Number</th>
-                <th data-bn="এজেন্সির নাম" data-en="Agency Name" data-cn="机构名称">Agency Name</th>
-                <th data-bn="মোট নম্বর" data-en="Total Mark" data-cn="总分">Total Mark</th>
-            </tr>
-
-            <!-- Final 5 -->
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-        </table>
-
-    </section>
-
-    <script>
-        function setLang(lang) {
-            document.querySelectorAll('[data-bn]').forEach(el => {
-                let text = el.getAttribute('data-' + lang);
-                if (text) el.innerText = text;
-            });
-        }
-
-        function showPage(id) {
-            document.querySelectorAll('section').forEach(s => s.style.display = 'none');
-            document.getElementById(id).style.display = 'block';
-        }
-
-        setLang('bn');
-        showPage('notice'); // default notice
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
