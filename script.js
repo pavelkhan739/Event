@@ -1,4 +1,3 @@
-// --- "A Poem for My Mom" প্রতিযোগীদের চূড়ান্ত তালিকা ---
 const participants = [
     { id: "9995862", name: "𝄟≛⃝𝐊𝐁𝐃🇧🇩ටි‏‏‏ꫀɭƒɪs꧊ꪱ̴", agency: "KING OF BANGLADESH", r1Mark: 0, r2Mark: 0 },
     { id: "2187245", name: "Liyana", agency: "Green House", r1Mark: 0, r2Mark: 0 },
@@ -47,11 +46,7 @@ const participants = [
     { id: "2879034", name: "♥️⃝≛⃝𝐒𝐇✓🇷ⓐ𝓷𝓘 ♥️♥️", agency: "মায়াবী রোজ", r1Mark: 0, r2Mark: 0 }
 ];
 
-// বাকি ডাটা হ্যান্ডলিং ও সর্টিং লজিক
 document.addEventListener('DOMContentLoaded', () => {
-    // আপনি যদি ডেমো হিসেবে টেস্ট করতে চান তবে নিচের লাইনটি আনকমেন্ট করুন
-    // generateRandomMarks(); 
-    
     loadRound1();
     loadRound2();
     loadWinners();
@@ -70,7 +65,7 @@ function loadRound2() {
     const list = document.getElementById('list15');
     list.innerHTML = "";
     top15.forEach((p, index) => {
-        list.innerHTML += `<tr><td>${index + 1}</td><td>${p.id}</td><td>${p.name}</td><td>${p.agency}</td><td style="color:var(--gold)"><strong>${p.r2Mark}</strong></td></tr>`;
+        list.innerHTML += `<tr><td>${index + 1}</td><td>${p.id}</td><td>${p.name}</td><td>${p.agency}</td><td><strong>${p.r2Mark}</strong></td></tr>`;
     });
 }
 
@@ -79,44 +74,17 @@ function loadWinners() {
     const container = document.getElementById('winnerList');
     container.innerHTML = "";
     const icons = ["🥇", "🥈", "🥉", "🏅", "🎖️"];
-    const prizes = [
-        "80,000 coins + VIP7 x 6",
-        "60,000 coins + VIP6 x 10",
-        "40,000 coins + VIP6 x 5",
-        "20,000 coins + VIP5 x 10",
-        "10,000 coins + VIP5 x 7"
-    ];
+    const prizes = ["80,000 coins + VIP7", "60,000 coins + VIP6", "40,000 coins + VIP6", "20,000 coins + VIP5", "10,000 coins + VIP5"];
 
     winners.forEach((p, index) => {
-        // যাদের মার্ক ০ তাদের উইনার লিস্টে দেখাবে না (ইভেন্ট শুরু হওয়ার আগে খালি দেখাবে)
-        if(p.r2Mark > 0) {
-            container.innerHTML += `
-                <div class="winner-card">
-                    <span class="rank-logo">${icons[index]}</span>
-                    <h3 style="color:var(--gold)">TOP ${index + 1}</h3>
-                    <p style="margin:10px 0;"><strong>${p.name}</strong></p>
-                    <div class="prize">${prizes[index]}</div>
-                </div>
-            `;
+        if (p.r2Mark > 0) {
+            container.innerHTML += `<div class="winner-card"><h3>${icons[index]} TOP ${index + 1}</h3><p>${p.name}</p><span>${prizes[index]}</span></div>`;
         }
     });
 }
 
-// পেজ কন্ট্রোল
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById(pageId).classList.add('active');
-    window.scrollTo({top:0, behavior:'smooth'});
-}
-
-function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('active');
-}
-
-// টেস্ট করার জন্য র্যান্ডম মার্ক জেনারেটর (ইভেন্টের সময় এটি দরকার নেই)
-function generateRandomMarks() {
-    participants.forEach(p => {
-        p.r1Mark = Math.floor(Math.random() * 50) + 50;
-        p.r2Mark = Math.floor(Math.random() * 50) + 50;
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Poem for My Mom - Mother's Day 2026</title>
+    <title>A Poem for My Mom - 2026</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -13,14 +13,15 @@
 
     <nav class="navbar">
         <div class="logo"><i class="fas fa-heart"></i> MOMS<span>VOICE</span></div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#" onclick="showPage('home')">Home</a></li>
-            <li><a href="#" onclick="showPage('notice')">Notice</a></li>
-            <li><a href="#" onclick="showPage('round1')">First Round</a></li>
-            <li><a href="#" onclick="showPage('round2')">Second Round</a></li>
-            <li><a href="#" onclick="showPage('winner')">Winners</a></li>
-        </ul>
-        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <div class="nav-scroll-container">
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('notice')">Notice</a></li>
+                <li><a href="#" onclick="showPage('round1')">Round 1</a></li>
+                <li><a href="#" onclick="showPage('round2')">Round 2</a></li>
+                <li><a href="#" onclick="showPage('winner')">Winners</a></li>
+            </ul>
+        </div>
     </nav>
 
     <div class="container">
@@ -38,68 +39,44 @@
                         class="fas fa-chevron-right"></i></button>
             </div>
         </section>
+
+        <!-- Notice Section -->
         <section id="notice" class="page">
             <h2 class="sec-title">Event Information & Guests</h2>
-            
             <div class="notice-grid">
-                <!-- Chief Guest -->
                 <div class="notice-card highlight-card">
                     <i class="fas fa-crown"></i>
                     <h3>Chief Guest</h3>
                     <p class="guest-name">Cheney</p>
                 </div>
-
-                <!-- Judges Panel (নতুন যোগ করা হয়েছে) -->
                 <div class="notice-card">
                     <i class="fas fa-gavel"></i>
                     <h3>Judges Panel</h3>
-                    <p><strong>Judge:</strong> Root</p>
-                    <p><strong>Judge:</strong> Admin BD Leader Of Ditto</p>
-                    <p><strong>Judge:</strong> Admin Rakib</p>
+                    <p>Root, Admin BD Leader, Admin Rakib</p>
                 </div>
-
-                <!-- Special Guests -->
+                <div class="notice-card">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h3>Anchors</h3>
+                    <p>Mayabini & Reza</p>
+                </div>
                 <div class="notice-card">
                     <i class="fas fa-users"></i>
                     <h3>Special Guests</h3>
                     <p>Queen Of Ditto, Saif, Silent, Rockstar, Bindas</p>
                 </div>
-
-                <!-- Anchors -->
-                <div class="notice-card">
-                    <i class="fas fa-microphone-alt"></i>
-                    <h3>Anchors</h3>
-                    <p><strong>Anchor:</strong> Mayabini</p>
-                    <p><strong>Co-Anchor:</strong> Reza</p>
-                </div>
             </div>
 
             <div class="info-box">
                 <h3>💐💐 The "A Poem for My Mom" Event 💐💐</h3>
-                <p>Participants are required to create a poem 📖 dedicated to their mother or a short text expressing maternal love 🩷, and then recite it aloud via voice 🎙️ during a live stream for judging.</p>
-                
+                <p>Recite a poem dedicated to your mother via voice 🎙️ live on stream.</p>
                 <div class="schedule-grid">
-                    <div class="sch-item">
-                        <strong>Round 1: Top 15</strong>
-                        <span>May 9, 2026 | ⏰ 9 PM (BD Time)</span>
-                    </div>
-                    <div class="sch-item">
-                        <strong>Round 2: 5 out of 15</strong>
-                        <span>May 10, 2026 | ⏰ 9 PM (BD Time)</span>
-                    </div>
+                    <div class="sch-item"><strong>Round 1:</strong> May 9 | ⏰ 9 PM</div>
+                    <div class="sch-item"><strong>Round 2:</strong> May 10 | ⏰ 9 PM</div>
                 </div>
-                <div class="reg-bar">
-                    <p>📢 Registration: April 28 (4 PM) - April 30 (4 PM) BD Time | <strong>Room ID: 10299</strong></p>
-                </div>
-            </div>
-
-            <div class="ticker-box">
-                <div class="ticker-title">Update:</div>
-                <marquee>Participate and win coins! Every participant gets 1,000 coins as a participation prize 🏵️</marquee>
             </div>
         </section>
 
-        <!-- Round Sections (Script handles content) -->
+        <!-- Round Sections -->
         <section id="round1" class="page">
             <h2 class="sec-title">First Round Results</h2>
             <div class="table-wrapper">
@@ -136,11 +113,8 @@
         </section>
 
         <section id="winner" class="page">
-            <h2 class="sec-title pulse-title"><i class="fas fa-crown"></i> Official Winners</h2>
+            <h2 class="sec-title pulse-title"><i class="fas fa-crown"></i> Winners</h2>
             <div class="winner-grid" id="winnerList"></div>
-            <div class="action-area no-print" style="text-align: center; margin-top: 30px;">
-                <button class="btn-print" onclick="window.print()"><i class="fas fa-print"></i> Print Report</button>
-            </div>
         </section>
 
     </div>
