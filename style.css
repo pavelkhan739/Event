@@ -126,19 +126,51 @@ body {
     margin-bottom: 20px;
 }
 
+/* --- Sudhu eituku replace korun --- */
+
+/* Names Column Layout */
 .notice-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 15px;
+    display: flex;
+    flex-direction: column; /* Protiti card niche niche thakbe */
+    gap: 20px;
     margin: 30px 0;
 }
 
 .notice-card {
     background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
-    text-align: center;
-    border-bottom: 3px solid var(--gold);
+    border-left: 4px solid var(--gold); /* Side border style */
+    display: flex;
+    flex-direction: column; /* Card-er bhetorer text-o column vabe thakbe */
+    gap: 10px;
+    text-align: left;
+}
+
+/* Category Title (e.g., Judge:, Anchor:) */
+.category-label {
+    font-size: 0.8rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+/* Name text styling */
+.name-text {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    padding-bottom: 5px;
+}
+
+/* Chief Guest Special Style */
+.highlight-card {
+    border-left-color: var(--heart-red);
+    background: rgba(255, 71, 87, 0.1);
 }
 
 .highlight-card {
