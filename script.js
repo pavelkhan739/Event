@@ -92,6 +92,7 @@ function loadRound2() {
 }
 
 function loadWinners() {
+    // Round 2 এর মার্ক অনুযায়ী সর্ট করে প্রথম ৫ জনকে নেওয়া হচ্ছে
     const winners = [...participants].sort((a, b) => b.r2Mark - a.r2Mark).slice(0, 5);
     const container = document.getElementById('winnerList');
     container.innerHTML = "";
@@ -104,8 +105,14 @@ function loadWinners() {
                 <div class="winner-card">
                     <span style="font-size:3rem">${icons[index]}</span>
                     <h3>TOP ${index + 1}</h3>
-                    <p style="margin:10px 0; font-weight:bold">${p.name}</p>
-                    <div style="background:rgba(255,215,0,0.1); padding:10px; border-radius:10px; color:var(--gold)">${prizes[index]}</div>
+                    <!-- এখানে নাম এবং আইডি একসাথে দেখানো হয়েছে -->
+                    <p style="margin:10px 0; font-weight:bold">
+                        ${p.name}<br>
+                        <span style="font-size:0.85rem; font-weight:normal; opacity:0.8">(ID: ${p.id})</span>
+                    </p>
+                    <div style="background:rgba(255,215,0,0.1); padding:10px; border-radius:10px; color:var(--gold)">
+                        ${prizes[index]}
+                    </div>
                 </div>
             `;
         }
